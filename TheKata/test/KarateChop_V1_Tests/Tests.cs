@@ -34,5 +34,13 @@ namespace KarateChop_V1_Tests
             var result = chopper.Chop(1, new[] { 2 });
             result.Should().Be(-1);
         }
+
+        [Fact]
+        public void GivenArrayWithOneElement_WhenChoppingForThatElement_AlwaysReturnZero()
+        {
+            var element = 1;
+            var result = chopper.Chop(element, new[] { element });
+            result.Should().Be(0);
+        }
     }
 }
