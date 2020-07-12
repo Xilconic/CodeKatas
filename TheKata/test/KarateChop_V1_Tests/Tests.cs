@@ -38,12 +38,25 @@ namespace KarateChop_V1_Tests
 
         [Theory]
         [InlineData(new[] { 2 })]
-        [InlineData(new[] { 2, 3})]
+        [InlineData(new[] { 2, 3 })]
         public void GivenArrayOfAnySize_WhenChoppingForNonElement_AlwaysReturnMinusOne(
             int[] numbers)
         {
             var result = chopper.Chop(1, numbers);
             result.Should().Be(-1);
+        }
+
+        [Theory]
+        [InlineData(new[] { 2, 3 }, 2, 0)]
+        [InlineData(new[] { 2, 3 }, 3, 1)]
+        [InlineData(new[] { 2, 3, 4 }, 2, 0)]
+        [InlineData(new[] { 2, 3, 4 }, 3, 1)]
+        [InlineData(new[] { 2, 3, 4 }, 4, 2)]
+        public void GivenArrayOfAnySize_WhenChoppingForElementInThatArray_ReturnIndexOfElementInArray(
+            int[] numbers, int targetNumber, int expectedIndex)
+        {
+            var result = chopper.Chop(targetNumber, numbers);
+            result.Should().Be(expectedIndex);
         }
     }
 }
