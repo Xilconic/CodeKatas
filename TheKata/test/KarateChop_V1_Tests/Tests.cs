@@ -27,5 +27,12 @@ namespace KarateChop_V1_Tests
             var result = chopper.Chop(default, Array.Empty<int>());
             result.Should().Be(-1);
         }
+
+        [Fact]
+        public void GivenArrayWithOneElement_WhenChoppingForNonElement_AlwaysReturnMinusOne()
+        {
+            var result = chopper.Chop(1, new[] { 2 });
+            result.Should().Be(-1);
+        }
     }
 }
