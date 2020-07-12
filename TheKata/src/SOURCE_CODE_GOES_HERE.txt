@@ -1,0 +1,1 @@
+Use the `src` folder to store the 'production code'.
