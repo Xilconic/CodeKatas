@@ -29,18 +29,21 @@ namespace KarateChop_V1_Tests
         }
 
         [Fact]
-        public void GivenArrayWithOneElement_WhenChoppingForNonElement_AlwaysReturnMinusOne()
-        {
-            var result = chopper.Chop(1, new[] { 2 });
-            result.Should().Be(-1);
-        }
-
-        [Fact]
         public void GivenArrayWithOneElement_WhenChoppingForThatElement_AlwaysReturnZero()
         {
             var element = 1;
             var result = chopper.Chop(element, new[] { element });
             result.Should().Be(0);
+        }
+
+        [Theory]
+        [InlineData(new[] { 2 })]
+        [InlineData(new[] { 2, 3})]
+        public void GivenArrayOfAnySize_WhenChoppingForNonElement_AlwaysReturnMinusOne(
+            int[] numbers)
+        {
+            var result = chopper.Chop(1, numbers);
+            result.Should().Be(-1);
         }
     }
 }
