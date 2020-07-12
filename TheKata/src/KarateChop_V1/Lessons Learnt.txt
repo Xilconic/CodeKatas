@@ -1,0 +1,4 @@
+﻿Errors during implementation:
+* Loop never terminating due to using code like `lowerBoundIndex = index++` followed in the next iteration of `index = (lowerBoundIndex + upperBoundIndex) / 2`.
+* Incorrect 'index inside collection size checking': `lowerBoundIndex >= index` instead of the correct `lowerBoundIndex <= index`.
+* Incorrect parameter ordering during refactoring.

@@ -6,11 +6,11 @@ namespace KarateChop_V1_Tests
 {
     public class Tests
     {
-        private ArrayChopper chopper;
+        private CollectionChopper chopper;
 
         public Tests()
         {
-            chopper = new ArrayChopper();
+            chopper = new CollectionChopper();
         }
 
         [Fact]
@@ -52,6 +52,10 @@ namespace KarateChop_V1_Tests
         [InlineData(new[] { 2, 3, 4 }, 2, 0)]
         [InlineData(new[] { 2, 3, 4 }, 3, 1)]
         [InlineData(new[] { 2, 3, 4 }, 4, 2)]
+        [InlineData(new[] { 2, 3, 4, 5 }, 2, 0)]
+        [InlineData(new[] { 2, 3, 4, 5 }, 3, 1)]
+        [InlineData(new[] { 2, 3, 4, 5 }, 4, 2)]
+        [InlineData(new[] { 2, 3, 4, 5 }, 5, 3)]
         public void GivenArrayOfAnySize_WhenChoppingForElementInThatArray_ReturnIndexOfElementInArray(
             int[] numbers, int targetNumber, int expectedIndex)
         {
