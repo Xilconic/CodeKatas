@@ -3,16 +3,24 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 16
 VisualStudioVersion = 16.0.30225.117
 MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "KarateChop_V1", "TheKata\src\KarateChop_V1\KarateChop_V1.csproj", "{8AABA4C1-62A2-4024-A1E0-18277D84FA57}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "KarateChop_V1_Tests", "TheKata\test\KarateChop_V1_Tests\KarateChop_V1_Tests.csproj", "{B932216D-3390-4C21-B277-73249C87BF0C}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
 		Release|Any CPU = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{5453A358-695F-4549-9D8C-CB3F8B45010B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{5453A358-695F-4549-9D8C-CB3F8B45010B}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{5453A358-695F-4549-9D8C-CB3F8B45010B}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{5453A358-695F-4549-9D8C-CB3F8B45010B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{8AABA4C1-62A2-4024-A1E0-18277D84FA57}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8AABA4C1-62A2-4024-A1E0-18277D84FA57}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8AABA4C1-62A2-4024-A1E0-18277D84FA57}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8AABA4C1-62A2-4024-A1E0-18277D84FA57}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B932216D-3390-4C21-B277-73249C87BF0C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B932216D-3390-4C21-B277-73249C87BF0C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B932216D-3390-4C21-B277-73249C87BF0C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B932216D-3390-4C21-B277-73249C87BF0C}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
